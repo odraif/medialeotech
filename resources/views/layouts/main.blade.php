@@ -19,7 +19,7 @@
     <header>
         <nav>
             <div class="nav-logo">
-                <a href="/"><img src="{{asset('images/logo.png')}}" alt=""></a>
+                <a href="/"><img src="{{ asset('images/logo.png') }}" alt=""></a>
             </div>
             <div class="nav-menu hide-nav-menu">
                 <div class="nav-link">
@@ -50,7 +50,7 @@
             </div>
             <div class="footer-nav">
                 <div class="footer-logo">
-                    <a href="/"><img src="{{asset('images/logo.png')}}" alt=""></a>
+                    <a href="/"><img src="{{ asset('images/logo.png') }}" alt=""></a>
                 </div>
                 <div class="footer-links">
                     <a href="/">Home</a>
@@ -82,6 +82,15 @@
     // dropbox action
     let actionBtn = document.querySelector(".action-btn");
     let menu = document.querySelector(".nav-dropbox-menu");
+
+    let menuBtn = document.querySelectorAll(".nav-dropbox-menu button");
+
+    menuBtn.forEach(btn => {
+        btn.addEventListener("click",()=>{
+        location.href = "/under-development"
+    })
+    });
+
     actionBtn.addEventListener('click', () => {
 
         menu.classList.toggle('show-menu');
@@ -108,13 +117,23 @@
         if (!(window.scrollY > window.innerHeight - 40)) return nav.classList.toggle("nav-event");
     });
 
+    var paths = ["/Branding", "/marketing", "/Web-Development"]
+
     window.addEventListener('scroll', () => {
         navmenu.classList.remove('show-nav-menu');
         navmenu.classList.add('hide-nav-menu');
-        if (window.scrollY > window.innerHeight) {
-            nav.classList.add("nav-event");
+        if (!paths.includes(window.location.pathname)) {
+            if (window.scrollY > window.innerHeight-60) {
+                nav.classList.add("nav-event");
+            } else {
+                nav.classList.remove("nav-event");
+            }
         } else {
-            nav.classList.remove("nav-event");
+            if (window.scrollY == 0) {
+                nav.classList.remove("nav-event");
+            } else {
+                nav.classList.add("nav-event");
+            }
         }
     })
 </script>

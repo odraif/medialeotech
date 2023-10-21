@@ -4,11 +4,13 @@
     --secondery-color: #F29300;
     --lite-secondery-color: #ffc774;
 }
+html{
+    scroll-behavior: smooth;
+}
 
 body {
     margin: 0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    scroll-behavior: smooth;
 }
 
 /* layouts.main css */
@@ -907,8 +909,8 @@ label {
 /* END home css */
 
 
-/* marketing css */
-.marketing-page {
+/* marketing / branding css */
+.marketing-page,.branding-page,.Web-page {
     width: 100dvw;
     height: 100dvh;
     background-image: url("../images/Wave.svg");
@@ -916,7 +918,7 @@ label {
     place-items: center;
 }
 
-.marketing-content {
+.marketing-content,.branding-content,.Web-content {
     background-color: #fff;
     padding: 50px;
     border-radius: 20px;
@@ -926,31 +928,32 @@ label {
     flex-wrap: wrap;
 }
 
-.marketing-image {
+.marketing-image,.branding-image,.Web-image {
     margin: 20px;
     margin-right: 0;
     display: flex;
     justify-content: center;
 }
 
-.marketing-image img {
+.marketing-image img,.branding-image img,.Web-image img {
     width: 60%;
 }
 
-.marketing-text {
+.marketing-text,.branding-text,.Web-text {
     margin: 20px;
 }
 
-.marketing-text ul {
-    list-style-type: square;
+.marketing-text ul,.branding-text ul,.Web-text ul {
+    list-style-image: url("../icons/check-circle.png");
+
     margin-left: 20px;
 }
 
-.marketing-text li {
+.marketing-text li,.branding-text li,.Web-text li {
     font-family: Arial, sans-serif;
     font-size: 16px;
     line-height: 24px;
     padding: 5px 0;
 }
 
-/* END marketing css */
+/* END marketing / branding css */

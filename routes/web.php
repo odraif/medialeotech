@@ -19,6 +19,10 @@ Route::get('/', function () {
     return view('home');
 })->name("home");
 
+Route::get('/under-development', function () {
+    return view('compoments.loading');
+})->name("loading");
+
 Route::get('/marketing', function () {
     return view('marketing');
 })->name("marketing");

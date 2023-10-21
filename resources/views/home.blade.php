@@ -21,7 +21,7 @@
                     exceptional teams.</p>
             </div>
             <div class="buttons">
-                <button class="learn-more-btn">Learn more</button>
+                <button class="learn-more-btn" onclick="learnmore()">Learn more</button>
                 <button class='contact-btn' onclick="open_contact_modal()">Contact us</button>
             </div>
             <div class="contact-modal">
@@ -366,7 +366,9 @@
             contactBtn.classList.remove("show-contact-modal");
             contactBtn.classList.add("hide-contact-modal");
         }
-
+        function learnmore(){
+            location.href= "/#service"
+        }
         var form = document.querySelector("#form");
         var check = document.querySelector("#check");
         var remove = document.querySelector("#remove")

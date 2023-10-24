@@ -4,13 +4,16 @@
     --secondery-color: #F29300;
     --lite-secondery-color: #ffc774;
 }
-html{
+
+html {
     scroll-behavior: smooth;
 }
 
 body {
     margin: 0;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+    font-family: 'Tajawal', sans-serif;
+
 }
 
 /* layouts.main css */
@@ -42,8 +45,8 @@ nav {
 }
 
 .nav-link {
-    margin-right: 20%;
-    width: 400px;
+    /* margin-right: 16%; */
+    width: 500px;
 }
 
 .nav-link a {
@@ -51,6 +54,10 @@ nav {
     color: #fff;
     margin: 10px;
 
+}
+
+.nav-link a:last-child{
+    font-weight: bold;
 }
 
 .nav-dropbox .action-btn {
@@ -61,6 +68,7 @@ nav {
     padding: 10px 20px;
     border-radius: 8px;
     cursor: pointer;
+    margin-right: 10%;
 }
 
 .nav-dropbox .nav-dropbox-menu button:hover {
@@ -340,7 +348,7 @@ footer {
 
 .home-page-content .CTA .content {
     position: absolute;
-    top: 40%;
+    top: 7%;
     left: 20%;
     width: 500px;
     z-index: 2;
@@ -349,7 +357,7 @@ footer {
 
 .home-page-content .CTA .buttons {
     position: absolute;
-    top: 66%;
+    top: 17%;
     left: 20%;
     width: 50%;
     z-index: 2;
@@ -390,6 +398,13 @@ footer {
     .home-page-content .CTA .cta-design {
         left: -25%;
     }
+    .home-page-content .CTA .content {
+        top: 53%;
+        width: 60%;
+    }
+    .home-page-content .CTA .buttons{
+        top:11%;
+    }
 }
 
 @media screen and (max-width:1500px) {
@@ -400,8 +415,11 @@ footer {
 
 @media screen and (max-width:650px) {
     .home-page-content .CTA .content {
-        top: 30%;
+        top: 4%;
         width: 60%;
+    }
+    .home-page-content .CTA .buttons{
+        top:11%;
     }
 }
 
@@ -411,8 +429,11 @@ footer {
     }
 
     .home-page-content .CTA .content {
-        top: 20%;
+        top: 3%;
 
+    }
+    .home-page-content .CTA .buttons{
+        top:10%;
     }
 }
 
@@ -909,8 +930,10 @@ label {
 /* END home css */
 
 
-/* marketing / branding css */
-.marketing-page,.branding-page,.Web-page {
+/* marketing / branding / web development  css */
+.marketing-page,
+.branding-page,
+.Web-page {
     width: 100dvw;
     height: 100dvh;
     background-image: url("../images/Wave.svg");
@@ -918,7 +941,9 @@ label {
     place-items: center;
 }
 
-.marketing-content,.branding-content,.Web-content {
+.marketing-content,
+.branding-content,
+.Web-content {
     background-color: #fff;
     padding: 50px;
     border-radius: 20px;
@@ -928,32 +953,146 @@ label {
     flex-wrap: wrap;
 }
 
-.marketing-image,.branding-image,.Web-image {
+.marketing-image,
+.branding-image,
+.Web-image {
     margin: 20px;
     margin-right: 0;
     display: flex;
     justify-content: center;
 }
 
-.marketing-image img,.branding-image img,.Web-image img {
+.marketing-image img,
+.branding-image img,
+.Web-image img {
     width: 60%;
 }
 
-.marketing-text,.branding-text,.Web-text {
+.marketing-text,
+.branding-text,
+.Web-text {
     margin: 20px;
 }
 
-.marketing-text ul,.branding-text ul,.Web-text ul {
+.marketing-text ul,
+.branding-text ul,
+.Web-text ul {
     list-style-image: url("../icons/check-circle.png");
 
     margin-left: 20px;
 }
 
-.marketing-text li,.branding-text li,.Web-text li {
+.marketing-text li,
+.branding-text li,
+.Web-text li {
     font-family: Arial, sans-serif;
     font-size: 16px;
     line-height: 24px;
     padding: 5px 0;
 }
 
-/* END marketing / branding css */
+/* END marketing / branding / web development css */
+
+
+/* offer css */
+.offer-bgimage{
+    width: 100dvw;
+    height: 100dvh;
+    position: fixed;
+}
+.offer-content{
+    display: grid;
+    place-items: center;
+    width: 100dvw;
+    height: 100dvh;
+}
+.offer-form {
+    width: 80%;
+    max-width: 500px;
+    margin: 10px;
+    padding: 10px;
+    background-color:#fff;
+    position: relative;
+    z-index: 10;
+    border-radius: 12px;
+    box-shadow: 0 0 15px #555454;
+}
+
+.offer-logo{
+    display: flex;
+    justify-content: center;
+}
+.offer-logo img{
+    width: 150px;
+    margin: 20px;
+}
+
+.offer-form .group-radio .radio-input {
+    display: flex;
+    margin: 20px;
+}
+
+.offer-form .group-radio {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cv-upload {
+    display: flex;
+    justify-content: center;
+}
+.cv-upload input[type=file] {
+    width: 60%;
+    color: #444;
+    padding: 5px;
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid #555;
+    margin: 4px;
+}
+
+.cv-upload input[type=file]::file-selector-button {
+    margin-right: 20px;
+    border: none;
+    background: var(--lite-primary-color);
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    transition: background .2s ease-in-out;
+}
+
+.cv-upload input[type=file]::file-selector-button:hover {
+    background: var(--primary-color);
+}
+
+.submit-btn input{
+    margin: 20px;
+    margin-right: 20px;
+    border: none;
+    background: var(--primary-color);
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.message-content{
+    position: relative;
+    z-index: 10;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px #555454;
+    text-align: center;
+}
+.message-content .message-icon{
+    display: flex;
+    justify-content: center;
+}
+.message-content .message-icon img{
+    width: 100px;
+}
+
+/* END offer css */

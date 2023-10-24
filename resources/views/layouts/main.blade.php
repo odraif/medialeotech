@@ -7,8 +7,9 @@
 
     <title>Loading...</title>
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
+    {{-- <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" /> --}}
+    <link href="https://fonts.cdnfonts.com/css/tajawal" rel="stylesheet">
     {{-- <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"> --}}
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <script defer src="https://kit.fontawesome.com/a4e771fc9a.js" crossorigin="anonymous"></script>
@@ -26,6 +27,7 @@
                     <a href="/">Home</a>
                     <a href="/#aboutus">About us</a>
                     <a href="/#service">Service</a>
+                    <a href="/offer">Hiring</a>
                 </div>
                 <div class="nav-dropbox">
                     <button class="action-btn">Account</button>
@@ -33,6 +35,19 @@
                         <button>Login</button>
                         <button>Sign up</button>
                     </div>
+                </div>
+                <div>
+                    <div id="google_translate_element"></div>
+                    <script type="text/javascript">
+                        function googleTranslateElementInit() {
+                            new google.translate.TranslateElement({
+                                pageLanguage: 'en'
+                            }, 'google_translate_element');
+                        }
+                    </script>
+
+                    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+                    </script>
                 </div>
             </div>
             <div class="nav-menu-btn">
@@ -86,9 +101,9 @@
     let menuBtn = document.querySelectorAll(".nav-dropbox-menu button");
 
     menuBtn.forEach(btn => {
-        btn.addEventListener("click",()=>{
-        location.href = "/under-development"
-    })
+        btn.addEventListener("click", () => {
+            location.href = "/under-development"
+        })
     });
 
     actionBtn.addEventListener('click', () => {
@@ -123,7 +138,7 @@
         navmenu.classList.remove('show-nav-menu');
         navmenu.classList.add('hide-nav-menu');
         if (!paths.includes(window.location.pathname)) {
-            if (window.scrollY > window.innerHeight-60) {
+            if (window.scrollY > window.innerHeight - 60) {
                 nav.classList.add("nav-event");
             } else {
                 nav.classList.remove("nav-event");

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\NewsLetterController;
+use App\Http\Controllers\OffersController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -35,6 +36,10 @@ Route::get('/Web-Development', function () {
     return view('Web-Development');
 })->name("Web-Development");
 
+Route::get('/offer', function () {
+    return view('offers');
+})->name("offer");
+
 
 
 
@@ -42,3 +47,4 @@ Route::post('/contact-form',[ContactController::class,'getFormData'])->name('con
 
 Route::post('/newsletter-form',[NewsLetterController::class,'getFormData'])->name('newsletter-form');
 
+Route::post("/hiring-form",[OffersController::class,'get_form_data'])->name('hiring-form');
